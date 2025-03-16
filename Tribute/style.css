@@ -1,0 +1,211 @@
+/* ====== RESET DEFAULT STYLES ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ====== BODY STYLING ====== */
+body {
+  font-family: Georgia, serif;
+  font-weight: 300;
+  text-align: center;
+  background-color: #d8bfd8;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* ====== CONTAINER ====== */
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* ====== HEADER & NAVIGATION ====== */
+header {
+  background-color: #333;
+  padding: 15px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Navbar List */
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px;
+  transition: background-color 0.3s, border-radius 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* ====== HAMBURGER MENU (CSS-ONLY) ====== */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle div {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+}
+
+/* Hide checkbox */
+#menu-checkbox {
+  display: none;
+}
+
+/* ====== MAIN CONTENT ====== */
+#main {
+  background-color: #EEEEEE;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+/* ====== SHINY REFLECTIVE TEXT ====== */
+.shiny-reflective, .subtitle {
+  font-size: 2em;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #a100ff 20%, #e600ff 50%, #a100ff 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.2em;
+}
+
+/* ====== RESPONSIVE IMAGES ====== */
+img {
+  width: 50%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== QUOTE STYLING ====== */
+.quote {
+  font-style: italic;
+  margin-top: 20px;
+  color: purple;
+}
+
+/* ====== LIST STYLING ====== */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* ====== BLOCKQUOTE STYLING ====== */
+blockquote {
+  font-style: italic;
+  margin-top: 20px;
+  color: #006400; /* Darker green for readability */
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: #d8bfd8; /* Light purple text for contrast */
+  border-radius: 0 0 8px 8px;
+}
+
+/* ====== TRIBUTE LINK ====== */
+#tribute-link {
+  color: teal;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* ====== MOBILE RESPONSIVE DESIGN ====== */
+@media (max-width: 768px) {
+  /* Hide nav items by default */
+  nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+
+  .menu-toggle {
+      display: flex;
+  }
+
+  /* Show nav when checkbox is checked */
+  #menu-checkbox:checked ~ ul {
+      display: flex;
+  }
+
+  /* Adjust Text Sizes for Mobile */
+  body {
+      font-size: 0.9rem;
+  }
+
+  .shiny-reflective {
+      font-size: 1.6em;
+  }
+
+  .subtitle {
+      font-size: 1.1em;
+  }
+
+  /* Reduce Section Padding for Smaller Screens */
+  .container {
+      padding: 15px;
+  }
+
+  img {
+    width: 70%;  /* Slightly bigger on smaller screens */
+    max-width: 300px;
+}
+}

@@ -1,0 +1,180 @@
+/* ====== RESET DEFAULT STYLES ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ====== BODY STYLING ====== */
+body {
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ====== HEADER & NAVIGATION ====== */
+header {
+  background-color: #333;
+  padding: 15px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Navbar List */
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px;
+  transition: background-color 0.3s, border-radius 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* ====== HAMBURGER MENU (CSS-ONLY) ====== */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle div {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+}
+
+/* Hide checkbox */
+#menu-checkbox {
+  display: none;
+}
+
+/* ====== SECTIONS STYLING ====== */
+section {
+  padding: 50px;
+  max-width: 800px;
+  margin: auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Responsive Text Sizes */
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  text-align: center;
+}
+
+p, li {
+  font-size: 1.2em;
+}
+
+img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== PROJECTS SECTION ====== */
+article {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+/* ====== MOBILE RESPONSIVE DESIGN ====== */
+@media (max-width: 600px) {
+  /* Hide nav items by default */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Show nav when checkbox is checked */
+  #menu-checkbox:checked ~ ul {
+    display: flex;
+  }
+
+  /* Adjust Text Sizes for Mobile */
+  body {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  p, li {
+    font-size: 1em;
+  }
+
+  /* Reduce Section Padding for Smaller Screens */
+  section {
+    padding: 30px;
+  }
+
+  img {
+    width: 80%;
+    max-width: 300px;
+  }
+}
